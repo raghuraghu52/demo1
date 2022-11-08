@@ -5,9 +5,8 @@ pipeline {
         stage(clone) {
             steps {
                  git "https://github.com/raghuraghu52/demo1.git"
-               
-            }
-        }
+                 }
+              }
                  stage(build) {
             steps {
                 sh "mvn clean install -Dskiptests"
@@ -17,6 +16,6 @@ pipeline {
             steps {
                  sh "mvn test"
             }
-          }
+        }
     }
 }
